@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h2 class="bg-light p-3">- RESTAURANT CARD -</h2>
+
+  <div class="container mx-3">
+    <h2><%= @restaurant.name %></h2>
+    <p>📍 <%= @restaurant.address %></p>
+    <p>📞 <%= @restaurant.phone_number %></p>
+    <p>🍽️ <%= @restaurant.category %></p>
+    <div class="btn btn-outline-primary"><%= link_to "Go back to index", restaurants_path %></div>
+  </div>
+</div>
