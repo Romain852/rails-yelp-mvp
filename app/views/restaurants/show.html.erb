@@ -6,6 +6,19 @@
     <p>📍 <%= @restaurant.address %></p>
     <p>📞 <%= @restaurant.phone_number %></p>
     <p>🍽️ <%= @restaurant.category %></p>
-    <div class="btn btn-outline-primary"><%= link_to "Go back to index", restaurants_path %></div>
+
+    <p><strong>Reviews</strong></p>
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.content %></li>
+      <% end %>
+    </ul>
+    <br>
+
+    <div class="d-grid gap-2 d-md-block">
+      <button class="btn btn-outline-primary btn-sm" type="button"><%= link_to "Go back to index", restaurants_path %></button>
+      <button class="btn btn-outline-primary btn-sm" type="button"><%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %></button>
+      <button class="btn btn-outline-primary btn-sm" type="button"><%= link_to 'Check out reviews', restaurant_reviews_path(@restaurant) %></button>
+    </div>
   </div>
 </div>

@@ -1,11 +1,11 @@
 <div class="container mt-5">
   <h2 class="bg-light p-3">- RESTAURANT LIST -</h2>
 
-  <ul>
+  <ul class="lh-lg">
     <% @restaurants.each do |restaurant| %>
       <li><%= restaurant.name%>, <%= restaurant.address %>, <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-light btn-sm"%></li>
     <% end %>
   </ul>
 
-  <div class="btn btn-outline-primary"><%= link_to "Add a new restaurant", new_restaurant_path %></div>
+  <div class="btn btn-outline-primary mx-3"><%= link_to "Add a new restaurant", new_restaurant_path %></div>
 </div>

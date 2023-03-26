@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <h2 class="bg-lg">Reviews for <%= @restaurant.name %></h2>
+
+  <ol>
+  <% @reviews.each do |r| %>
+    <li>(Rating: <%= r.rating %>/5) <%= r.content %></li>
+  <% end %>
+  </ol>
+
+
+  <%= link_to 'Back to Restaurant', restaurant_path(@restaurant) %>
+</div>
